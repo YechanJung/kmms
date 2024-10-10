@@ -175,7 +175,6 @@ function App() {
       >
         Emotion Extraction &amp; Music Generation
       </Typography>
-
       <Grid container spacing={6} sx={{ flexGrow: 1 }}>
         <Grid
           item
@@ -234,7 +233,7 @@ function App() {
               controls
               sx={{
                 flexGrow: 1,
-                padding: "1.5rem",
+                padding: "0rem",
                 backgroundColor: theme.palette.background.paper,
                 borderBottomLeftRadius: 16,
                 borderBottomRightRadius: 16,
@@ -251,7 +250,62 @@ function App() {
             </CardContent>
           </Card>
         </Grid>
-
+        {/* // Add Extracted Emotion Card */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: "flex", flexDirection: "column" }}
+        >
+          <Card
+            sx={{
+              borderRadius: 3,
+              boxShadow: 4,
+              flexGrow: 1,
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{ color: theme.palette.text.secondary }}
+              >
+                Extracted Emotion
+              </Typography>
+              {/* Add content to display extracted emotion here */}
+            </CardContent>
+          </Card>
+        </Grid>
+        {/* // Add Generated Prompt Card */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: "flex", flexDirection: "column" }}
+        >
+          <Card
+            sx={{
+              borderRadius: 3,
+              boxShadow: 4,
+              flexGrow: 1,
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{ color: theme.palette.text.secondary }}
+              >
+                Generated Prompt
+              </Typography>
+              {/* Add content to display generated prompt here */}
+            </CardContent>
+          </Card>
+        </Grid>
         <Grid item xs={12} sx={{ flexGrow: 1 }}>
           <Box
             sx={{
@@ -272,7 +326,6 @@ function App() {
             </Box>
           </Box>
         </Grid>
-
         <Grid
           item
           xs={12}
@@ -330,7 +383,7 @@ function App() {
               controls
               sx={{
                 flexGrow: 1,
-                padding: "1.5rem",
+                padding: "0rem",
                 backgroundColor: theme.palette.background.paper,
                 borderBottomLeftRadius: 16,
                 borderBottomRightRadius: 16,
@@ -348,11 +401,63 @@ function App() {
           </Card>
         </Grid>
       </Grid>
-
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ display: "flex", flexDirection: "column" }}
+      >
+        <Card
+          sx={{
+            borderRadius: 3,
+            boxShadow: 4,
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <CardContent>
+            <Typography
+              variant="h6"
+              align="center"
+              sx={{ color: theme.palette.text.secondary }}
+            >
+              Generated Prompt
+            </Typography>
+            {/* Add content to display generated prompt here */}
+          </CardContent>
+        </Card>
+      </Grid>{" "}
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ display: "flex", flexDirection: "column" }}
+      >
+        <Card
+          sx={{
+            borderRadius: 3,
+            boxShadow: 4,
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <CardContent>
+            <Typography
+              variant="h6"
+              align="center"
+              sx={{ color: theme.palette.text.secondary }}
+            >
+              Generated Prompt
+            </Typography>
+            {/* Add content to display generated prompt here */}
+          </CardContent>
+        </Card>
+      </Grid>
       <Divider
         sx={{ marginY: "3rem", backgroundColor: theme.palette.divider }}
       />
-
       <Box sx={{ flexGrow: 1 }}>
         <Typography
           variant="h5"
