@@ -33,7 +33,7 @@ const nodes = [
   { id: "10", data: { label: "FC Layer" }, position: { x: 400, y: 300 } },
   {
     id: "11",
-    data: { label: "Attention Fusion Layer" },
+    data: { label: "Attention" },
     position: { x: 200, y: 400 },
   },
   { id: "12", data: { label: "MLP" }, position: { x: 200, y: 500 } },
