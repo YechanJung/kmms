@@ -13,7 +13,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import ReactFlow, { MiniMap, Controls } from "react-flow-renderer";
+import ReactFlow, { Controls } from "react-flow-renderer";
 
 const nodes = [
   {
