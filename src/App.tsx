@@ -311,8 +311,8 @@ function App() {
                     sx={{ p: 2, bgcolor: "background.default" }}
                   >
                     {/* Add content to display extracted emotion here */}
-                    <Typography variant="body1">Emotion: Happy</Typography>
-                    <Typography variant="body1">Intensity: 85%</Typography>
+                    <Typography variant="body1">Emotion: Sad</Typography>
+                    <Typography variant="body1">Intensity: High</Typography>
                   </Paper>
                 </CardContent>
                 <CardContent>
@@ -325,8 +325,9 @@ function App() {
                   >
                     {/* Add content to display generated prompt here */}
                     <Typography variant="body1">
-                      "Create an upbeat, energetic melody that reflects
-                      happiness and excitement."
+                      "A slow, melancholic piano piece in a minor key, with a
+                      haunting melody that gradually builds up to a powerful,
+                      cathartic climax, reflecting deep sorrow and despair."
                     </Typography>
                   </Paper>
                 </CardContent>
@@ -396,8 +397,8 @@ function App() {
                     sx={{ p: 2, bgcolor: "background.default" }}
                   >
                     {/* Add content to display extracted emotion here */}
-                    <Typography variant="body1">Emotion: Calm</Typography>
-                    <Typography variant="body1">Intensity: 92%</Typography>
+                    <Typography variant="body1">Emotion: Happy</Typography>
+                    <Typography variant="body1">Intensity: medium</Typography>
                   </Paper>
                 </CardContent>
                 <CardContent>
@@ -410,8 +411,9 @@ function App() {
                   >
                     {/* Add content to display generated prompt here */}
                     <Typography variant="body1">
-                      "Compose a soothing, gentle melody that evokes a sense of
-                      tranquility and peace."
+                      "A cheerful piano piece in a major key, with a moderate
+                      tempo, relatively high pitch, and somewhat staccato
+                      articulation, creating a sense of joy and happiness."
                     </Typography>
                   </Paper>
                 </CardContent>
