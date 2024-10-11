@@ -112,7 +112,7 @@ const nodes = [
   {
     id: "11",
 
-    data: { label: "Attention FC Layer" },
+    data: { label: "Attention FC" },
 
     position: { x: 200, y: 400 },
   },
@@ -312,7 +312,7 @@ function App() {
                   >
                     {/* Add content to display extracted emotion here */}
                     <Typography variant="body1">Emotion: Happy</Typography>
-                    <Typography variant="body1">Confidence: 85%</Typography>
+                    <Typography variant="body1">Intensity: 85%</Typography>
                   </Paper>
                 </CardContent>
                 <CardContent>
@@ -397,7 +397,7 @@ function App() {
                   >
                     {/* Add content to display extracted emotion here */}
                     <Typography variant="body1">Emotion: Calm</Typography>
-                    <Typography variant="body1">Confidence: 92%</Typography>
+                    <Typography variant="body1">Intensity: 92%</Typography>
                   </Paper>
                 </CardContent>
                 <CardContent>
