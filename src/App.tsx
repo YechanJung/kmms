@@ -112,7 +112,7 @@ const nodes = [
   {
     id: "11",
 
-    data: { label: "Attention FC" },
+    data: { label: "FC Layer" },
 
     position: { x: 200, y: 400 },
   },
