@@ -307,7 +307,7 @@ function App() {
               <Card>
                 <CardMedia
                   component="video"
-                  src="src/assets/video/Sad_017.mp4"
+                  src="public/video/Sad_017.mp4"
                   controls
                   sx={{ height: 400 }}
                   ref={videoRef1}
@@ -370,7 +370,7 @@ function App() {
                   </Typography>
                   <CardMedia
                     component="audio"
-                    src="src/assets/music/musicgen_out_sad-high.wav"
+                    src="public/music/musicgen_out_sad-high.wav"
                     controls
                     sx={{
                       mt: 2,
@@ -398,7 +398,7 @@ function App() {
               <Card>
                 <CardMedia
                   component="video"
-                  src="src/assets/video/Happy_011.mp4"
+                  src="public/video/Happy_011.mp4"
                   controls
                   sx={{ height: 400 }}
                   ref={videoRef2}
@@ -460,7 +460,7 @@ function App() {
                   </Typography>
                   <CardMedia
                     component="audio"
-                    src="src/assets/music/musicgen_out_happy-medium.wav"
+                    src="public/music/musicgen_out_happy-medium.wav"
                     controls
                     sx={{
                       mt: 2,
