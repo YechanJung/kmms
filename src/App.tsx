@@ -265,9 +265,9 @@ function App() {
   const handlePlayPause1 = () => {
     if (videoRef1.current) {
       if (isPlaying1) {
-        videoRef1.current.pause();
+        (videoRef1.current as HTMLVideoElement).pause();
       } else {
-        videoRef1.current.play();
+        (videoRef1.current as HTMLVideoElement).play();
       }
       setIsPlaying1(!isPlaying1);
     }
@@ -276,9 +276,9 @@ function App() {
   const handlePlayPause2 = () => {
     if (videoRef2.current) {
       if (isPlaying2) {
-        videoRef2.current.pause();
+        (videoRef2.current as HTMLVideoElement).pause();
       } else {
-        videoRef2.current.play();
+        (videoRef2.current as HTMLVideoElement).play();
       }
       setIsPlaying2(!isPlaying2);
     }
