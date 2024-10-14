@@ -1,4 +1,6 @@
+import { useState, useRef } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 import CssBaseline from "@mui/material/CssBaseline";
 import {
   Container,
@@ -16,7 +18,6 @@ import ReactFlow, { Controls, Background } from "react-flow-renderer";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 
-// Define custom theme inspired by Apple's design
 const theme = createTheme({
   palette: {
     primary: {
@@ -256,6 +257,33 @@ const NewFlowChart = () => {
 };
 
 function App() {
+  const [isPlaying1, setIsPlaying1] = useState(false);
+  const [isPlaying2, setIsPlaying2] = useState(false);
+  const videoRef1 = useRef(null);
+  const videoRef2 = useRef(null);
+
+  const handlePlayPause1 = () => {
+    if (videoRef1.current) {
+      if (isPlaying1) {
+        videoRef1.current.pause();
+      } else {
+        videoRef1.current.play();
+      }
+      setIsPlaying1(!isPlaying1);
+    }
+  };
+
+  const handlePlayPause2 = () => {
+    if (videoRef2.current) {
+      if (isPlaying2) {
+        videoRef2.current.pause();
+      } else {
+        videoRef2.current.play();
+      }
+      setIsPlaying2(!isPlaying2);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -279,9 +307,10 @@ function App() {
               <Card>
                 <CardMedia
                   component="video"
-                  src="path_to_video1.mp4"
+                  src="src/assets/video/Sad_017.mp4"
                   controls
                   sx={{ height: 400 }}
+                  ref={videoRef1}
                 />
                 <CardContent>
                   <Typography variant="h6" align="center" gutterBottom>
@@ -290,11 +319,16 @@ function App() {
                   <Box
                     sx={{ display: "flex", justifyContent: "center", mt: 2 }}
                   >
-                    <IconButton color="primary" size="large">
-                      <PlayArrowIcon fontSize="inherit" />
-                    </IconButton>
-                    <IconButton color="primary" size="large">
-                      <PauseIcon fontSize="inherit" />
+                    <IconButton
+                      color="primary"
+                      size="large"
+                      onClick={handlePlayPause1}
+                    >
+                      {isPlaying1 ? (
+                        <PauseIcon fontSize="inherit" />
+                      ) : (
+                        <PlayArrowIcon fontSize="inherit" />
+                      )}
                     </IconButton>
                   </Box>
                 </CardContent>
@@ -310,7 +344,6 @@ function App() {
                     elevation={1}
                     sx={{ p: 2, bgcolor: "background.default" }}
                   >
-                    {/* Add content to display extracted emotion here */}
                     <Typography variant="body1">Emotion: Sad</Typography>
                     <Typography variant="body1">Intensity: High</Typography>
                   </Paper>
@@ -337,7 +370,7 @@ function App() {
                   </Typography>
                   <CardMedia
                     component="audio"
-                    src="path_to_music1.mp3"
+                    src="src/assets/music/musicgen_out_sad-high.wav"
                     controls
                     sx={{
                       mt: 2,
@@ -365,9 +398,10 @@ function App() {
               <Card>
                 <CardMedia
                   component="video"
-                  src="path_to_video2.mp4"
+                  src="src/assets/video/Happy_011.mp4"
                   controls
                   sx={{ height: 400 }}
+                  ref={videoRef2}
                 />
                 <CardContent>
                   <Typography variant="h6" align="center" gutterBottom>
@@ -376,11 +410,16 @@ function App() {
                   <Box
                     sx={{ display: "flex", justifyContent: "center", mt: 2 }}
                   >
-                    <IconButton color="primary" size="large">
-                      <PlayArrowIcon fontSize="inherit" />
-                    </IconButton>
-                    <IconButton color="primary" size="large">
-                      <PauseIcon fontSize="inherit" />
+                    <IconButton
+                      color="primary"
+                      size="large"
+                      onClick={handlePlayPause2}
+                    >
+                      {isPlaying2 ? (
+                        <PauseIcon fontSize="inherit" />
+                      ) : (
+                        <PlayArrowIcon fontSize="inherit" />
+                      )}
                     </IconButton>
                   </Box>
                 </CardContent>
@@ -396,7 +435,6 @@ function App() {
                     elevation={1}
                     sx={{ p: 2, bgcolor: "background.default" }}
                   >
-                    {/* Add content to display extracted emotion here */}
                     <Typography variant="body1">Emotion: Happy</Typography>
                     <Typography variant="body1">Intensity: medium</Typography>
                   </Paper>
@@ -409,7 +447,6 @@ function App() {
                     elevation={1}
                     sx={{ p: 2, bgcolor: "background.default" }}
                   >
-                    {/* Add content to display generated prompt here */}
                     <Typography variant="body1">
                       "A cheerful piano piece in a major key, with a moderate
                       tempo, relatively high pitch, and somewhat staccato
@@ -423,7 +460,7 @@ function App() {
                   </Typography>
                   <CardMedia
                     component="audio"
-                    src="path_to_music2.mp3"
+                    src="src/assets/music/musicgen_out_happy-medium.wav"
                     controls
                     sx={{
                       mt: 2,
